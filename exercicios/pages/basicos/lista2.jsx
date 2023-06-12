@@ -3,15 +3,19 @@ import { Space_Mono } from "next/font/google"
 export default function lista2() {
     return (
         <div>
-            {geraLista()}
+            <div>{geraLista(15)}</div>
+            <div>{geraLista(5)}</div>
         </div>
+
+        
+
     )
 }
 
-function geraLista() {
+function geraLista(max) {
 
     const lista = []
-    for (let i = 0; i <= 10; i++) {
+    for (let i = 0; i <= max; i++) {
         lista.push(<span>{i},</span>)
     }
     return lista
