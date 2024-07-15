@@ -1,9 +1,11 @@
 import AuthInput from '@/components/auth/AuthInput'
 import { IconeAtencao } from '@/components/icons'
+import useAuth from '@/data/hook/useAuth'
 import Image from 'next/image'
 import { useState } from 'react'
 
 export default function Autenticacao() {
+  const { usuario, loginGoogle } = useAuth()
   const [modo, setModo] = useState<'login' | 'cadastro'>('login')
   const [erro, setErro] = useState(null)
   const [email, setEmail] = useState('')
